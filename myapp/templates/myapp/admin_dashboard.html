@@ -1,0 +1,77 @@
+{% extends "myapp/admin_layout.html" %}
+
+{% block title %}Admin Dashboard{% endblock title %}
+
+{% block content %}
+
+<div class="container-fluid py-4">
+
+    <h2 class="mb-4">Dashboard</h2>
+
+    <div class="row g-4">
+
+        <!-- Users -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h6 class="text-muted">Total Users</h6>
+                    <h2>{{ total_users }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h6 class="text-muted">Categories</h6>
+                    <h2>{{ total_categories }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h6 class="text-muted">Products</h6>
+                    <h2>{{ total_products }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h6 class="text-muted">Total Orders</h6>
+                    <h2>{{ total_orders }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subcategories -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h6 class="text-muted">Subcategories</h6>
+                    <h2>{{ total_subcategories }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Revenue -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h6 class="text-muted">Total Revenue</h6>
+                    <h2>₹{{ total_revenue }}</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock content %}

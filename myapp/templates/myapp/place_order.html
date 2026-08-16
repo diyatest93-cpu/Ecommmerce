@@ -1,0 +1,147 @@
+{% extends 'myapp/user_layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container my-5">
+
+    <h2 class="text-center mb-4">Place Your Order</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="row">
+
+            <!-- Delivery Address -->
+            <div class="col-md-6">
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5>Delivery Address</h5>
+                    </div>
+
+                    <div class="card-body">
+
+                        <p><strong>{{ address.full_name }}</strong></p>
+
+                        <p>{{ address.mobile_no }}</p>
+
+                        <p>
+                            {{ address.address }}<br>
+                            {{ address.city }},
+                            {{ address.state }} -
+                            {{ address.pincode }}
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="card shadow-sm">
+
+                    <div class="card-header bg-success text-white">
+                        <h5>Payment Method</h5>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="form-check mb-2">
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="payment_method"
+                                   value="COD"
+                                   id="cod"
+                                   checked>
+
+                            <label class="form-check-label" for="cod">
+                                Cash on Delivery
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input"
+                                   type="radio"
+                                   name="payment_method"
+                                   value="Online"
+                                   id="online">
+
+                            <label class="form-check-label" for="online">
+                                Online Payment (Razorpay)
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Order Summary -->
+            <div class="col-md-6">
+
+                <div class="card shadow-sm">
+
+                    <div class="card-header bg-dark text-white">
+                        <h5>Order Summary</h5>
+                    </div>
+
+                    <div class="card-body">
+
+                        <table class="table">
+
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Qty</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                {% for item in cart_items %}
+
+                                <tr>
+
+                                    <td>{{ item.product.pname }}</td>
+
+                                    <td>{{ item.quantity }}</td>
+
+                                    <td>₹{{ item.total_price }}</td>
+
+                                </tr>
+
+                                {% endfor %}
+
+                            </tbody>
+
+                        </table>
+
+                        <hr>
+
+                        <h4 class="text-end">
+                            Total : ₹{{ total }}
+                        </h4>
+
+                        <div class="d-grid mt-4">
+
+                            <button type="submit"
+                                    class="btn btn-primary btn-lg">
+                                Place Order
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock %}

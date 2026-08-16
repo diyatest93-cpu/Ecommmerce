@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.sidebar a{
+    color:white;
+    text-decoration: none;
+}
+.sidebar a:hover{
+    color:wheat;
+}
+button .a{
+    text-decoration: none;
+}
+th,td{
+    padding: 12px;
+    text-align: center;
+}
+th{
+    padding: 15px;
+}

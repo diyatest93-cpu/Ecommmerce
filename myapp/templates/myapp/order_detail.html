@@ -1,0 +1,155 @@
+{% extends "myapp/user_layout.html" %}
+
+{% block title %}Order Details{% endblock title %}
+
+{% block content %}
+
+<div class="container my-5">
+
+    <div class="row">
+
+        <!-- Profile Sidebar -->
+        <div class="col-md-4">
+            {% include 'myapp/profile_sidebar.html' %}
+        </div>
+
+        <!-- Order Details -->
+        <div class="col-md-8">
+
+            <div class="card shadow">
+
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0">Order #{{ order.id }}</h4>
+
+                    <span class="badge bg-warning">
+                        {{ order.status }}
+                    </span>
+                </div>
+
+                <div class="card-body">
+
+                    <!-- Order Information -->
+                    <h5 class="mb-3">Order Information</h5>
+
+                    <p>
+                        <strong>Order Date:</strong>
+                        {{ order.created_at|date:"d M Y, h:i A" }}
+                    </p>
+
+                    <p>
+                        <strong>Payment Method:</strong>
+                        {{ order.payment_method }}
+                    </p>
+
+                    <p>
+                        <strong>Payment Status:</strong>
+                        {{ order.payment_status }}
+                    </p>
+
+                    <hr>
+
+                    <!-- Products -->
+                    <h5 class="mb-3">Products</h5>
+
+                    {% for item in order_items %}
+
+                    <div class="border rounded p-3 mb-3">
+
+                        <div class="row align-items-center">
+
+                            <div class="col-md-3">
+                                <img src="{{ item.product.p_image.url }}"
+                                     class="img-fluid rounded"
+                                     style="height:100px; width:100px; object-fit:cover;">
+                            </div>
+
+                            <div class="col-md-5">
+
+                                <h6>{{ item.product.pname }}</h6>
+
+                                <p class="mb-1">
+                                    Price: ₹{{ item.price }}
+                                </p>
+
+                                <p class="mb-0">
+                                    Quantity: {{ item.quantity }}
+                                </p>
+
+                            </div>
+
+                            <div class="col-md-4 text-md-end">
+
+                                <strong>
+                                    ₹{% widthratio item.price 1 item.quantity %}
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    {% endfor %}
+
+                    <hr>
+
+                    <!-- Total -->
+                    <div class="text-end">
+
+                        <h5>
+                            Total Amount:
+                            <strong>₹{{ order.total_amount }}</strong>
+                        </h5>
+
+                    </div>
+
+                    <hr>
+
+                    <!-- Delivery Address -->
+                    <h5 class="mb-3">Delivery Address</h5>
+
+                    <div class="border rounded p-3">
+
+                        <p class="mb-1">
+                            <strong>{{ order.address.full_name }}</strong>
+                        </p>
+
+                        <p class="mb-1">
+                            Mobile: {{ order.address.mobile_no }}
+                        </p>
+
+                        <p class="mb-1">
+                            {{ order.address.address }}
+                        </p>
+
+                        <p class="mb-1">
+                            {{ order.address.city }},
+                            {{ order.address.state }}
+                        </p>
+
+                        <p class="mb-0">
+                            Pincode: {{ order.address.pincode }}
+                        </p>
+
+                    </div>
+
+                    <div class="mt-4">
+
+                        <a href="{% url 'my_orders' %}"
+                           class="btn btn-secondary">
+                            ← Back to Orders
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock content %}

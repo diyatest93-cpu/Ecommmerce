@@ -1,0 +1,87 @@
+{% extends "myapp/user_layout.html" %}
+
+{% block title %}My Orders{% endblock title %}
+
+{% block content %}
+
+<div class="container my-5">
+
+    <div class="row">
+
+        <!-- Profile Sidebar -->
+        <div class="col-md-4">
+            {% include 'myapp/profile_sidebar.html' %}
+        </div>
+
+        <!-- Orders -->
+        <div class="col-md-8">
+
+            <div class="card card-shadow">
+
+                <div class="card-header">
+                    <h4>My Orders</h4>
+                </div>
+
+                <div class="card-body">
+
+                    {% if orders %}
+
+                        {% for order in orders %}
+
+                        <div class="border rounded p-3 mb-3">
+
+                            <div class="d-flex justify-content-between">
+                                <h5>Order #{{ order.id }}</h5>
+
+                                <span class="badge bg-warning">
+                                    {{ order.status }}
+                                </span>
+                            </div>
+
+                            <hr>
+
+                            <p>
+                                <strong>Order Date:</strong>
+                                {{ order.created_at|date:"d M Y, h:i A" }}
+                            </p>
+
+                            <p>
+                                <strong>Total Amount:</strong>
+                                ₹{{ order.total_amount }}
+                            </p>
+                            <a href="{% url 'order_detail' order.id%}" class="btn btn-primary btn-sm">View Details</a>
+
+                            <p>
+                                <strong>Payment:</strong>
+                                {{ order.payment_method }}
+                            </p>
+
+                            <p>
+                                <strong>Payment Status:</strong>
+                                {{ order.payment_status }}
+                            </p>
+
+                        </div>
+
+                        {% endfor %}
+
+                    {% else %}
+
+                        <div class="text-center py-5">
+                            <h5>No Orders Found</h5>
+                            <p>You haven't placed any orders yet.</p>
+                        </div>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock content %}

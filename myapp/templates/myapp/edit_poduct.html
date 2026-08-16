@@ -1,0 +1,68 @@
+{% extends "myapp/admin_layout.html" %}
+ {% block title %} Edit Product
+ {%endblock title %} {% block content %}
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h4>Edit Product</h4>
+    </div>
+    <div class="card-body">
+      <form method="POST" enctype='multipart/form-data'>
+        {% csrf_token %}
+        {{form.errors}}
+        <div class="mb-4">
+          <label class="label-form mb-3">category</label>
+          {{form.category}}
+        </div>
+        <div class="mb-4">
+          <label class="label-form mb-3">Subcategory Name</label>
+          {{form.subcategory}}
+        </div>
+        <div class="mb-4">
+          <label class="label-form mb-3">Thirdcategory Name</label>
+          {{form.thirdcategory}}
+        </div>
+        <div class="mb-4">
+          <label class="label-form mb-3">product Name</label>
+          {{form.pname}}
+        </div>
+        <div class="mt-4">
+          <label class="label-form m-3">Product Brand:</label>
+          {{form.brand}}
+        </div>
+
+        <div class="mt-4">
+          <label class="label-form m-3">Product price:</label>
+          {{form.price}}
+        </div>
+        <div class="mt-4">
+          <label class="label-form m-3">Prodct Description:</label>
+          {{form.p_detail}}
+        </div>
+
+        <div class="mt-4">
+          <label class="label-form m-3"> Select Prodct Image:</label>
+          {{form.p_image}}
+        </div>
+        <div class="mt-4">
+          <label class="label-form m-3">Prodct Rating:</label>
+          {{form.p_rating}}
+        </div>
+        
+        <div class="mt-4">
+          <label class="label-form m-3">Prodct Stock:</label>
+          {{form.stock}}
+        </div>
+        <div class="mb-4">
+          <label class="label-form mb-3">Status</label>
+          {{form.status}}
+        </div>
+        <button class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

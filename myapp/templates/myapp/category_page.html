@@ -1,0 +1,39 @@
+{% extends "myapp/user_layout.html" %}
+
+{% block title %} category Page{% endblock title %}
+
+{% block content %}
+
+<div class="conatiner">
+    <div class="text-centermb-5">
+        {{ cat.category_name}}
+        <p>Select Your Category</p>
+        
+    </div>
+    <div class="row">
+        {% for i in  subcategories %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">
+                            {{i.subcategory_name}}
+                        </h5>
+                        <div class="div">
+                        
+                        {% if i.subcategory_image %}
+                            <img src="{{ i.subcategory_image.url }}" alt="no" height="190" width="200" class="img-fluid shadow-sm">
+                        {% endif %}
+                        </div>
+                        <a href="{% url 'subcategory_page' i.id%}" class="btn btn-primary">View Products</a>
+                    </div>
+                </div>
+            </div>
+            
+        
+        
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock content %}

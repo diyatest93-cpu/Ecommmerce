@@ -1,0 +1,42 @@
+{% extends "myapp/admin_layout.html" %}
+{% block title %}
+edit category
+{%endblock title %} 
+{% block content %}
+
+<div class="container">
+  {% if messages %} {% for message in messages %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
+
+  {% endfor %} {% endif %}
+  <div class="card shadow" >
+    <div class="card-header bg-primary text-white">
+      <h4>Edit Category</h4>
+    </div>  
+
+    <div class="card-body">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+          <div class="mb-3">
+            <label class="form-label">Category Name</label>
+            {{form.category_name}}
+          </div>
+          <div class="mb-3">
+            <lable class="form-label">Choose image</lable>
+            {{form.category_image}}
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Status</label>
+            {{form.status}}
+          </div>
+          <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+      </div>
+    
+  </div>
+</div>
+
+{% endblock content %}

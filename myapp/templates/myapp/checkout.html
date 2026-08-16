@@ -1,0 +1,128 @@
+{% extends "myapp/user_layout.html" %}
+{% block title %}CheckOut Page{% endblock title %}
+{% block content %}
+<div class="container my-5">
+    {% if messages %} {% for message in messages %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
+
+  {% endfor %} {% endif %}
+
+    <div class="row">
+
+        <!-- Address Form -->
+        <div class="col-lg-7">
+
+            <div class="card shadow border-0">
+                <div class="card-header bg-primary text-white">
+                    <h3>Delivery Address</h3>
+                </div>
+
+                <div class="card-body">
+
+                    <form method="POST">
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            {{ form.full_name }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Mobile Number</label>
+                            {{ form.mobile_no }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Address</label>
+                            {{ form.address }}
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">City</label>
+                                {{ form.city }}
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">State</label>
+                                {{ form.state }}
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Pincode</label>
+                                {{ form.pincode }}
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100">
+                            Save Address
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Order Summary -->
+        <div class="col-lg-5">
+
+            <div class="card shadow border-0">
+
+                <div class="card-header bg-dark text-white">
+                    <h3>Order Summary</h3>
+                </div>
+
+                <div class="card-body">
+
+                    {% for item in cart_items %}
+
+                    <div class="d-flex justify-content-between mb-3">
+
+                        <div>
+                            <h6>{{ item.product.pname }}</h6>
+                            <small class="text-muted">
+                                Qty : {{ item.quantity }}
+                            </small>
+                        </div>
+
+                        <h6>₹ {{ item.total_price }}</h6>
+
+                    </div>
+
+                    <hr>
+
+                    {% endfor %}
+
+                    <div class="d-flex justify-content-between">
+
+                        <h4>Grand Total</h4>
+
+                        <h4 class="text-success">
+                            ₹ {{ total }}
+                        </h4>
+
+                    </div>
+
+                    <a href="{% url 'place_order' %}" class="btn btn-primary w-100 mt-4">
+                        Place Order
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock content %}

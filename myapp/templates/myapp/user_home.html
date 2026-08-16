@@ -1,0 +1,80 @@
+{% extends "myapp/user_layout.html" %}
+{% block title  %}home page{% endblock title  %}
+{% block content %}
+
+
+<section class="hero-section">
+    <div class="container-fluid p-0">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+            <div class="carousel-inner">
+                {% for i in banners %}
+                    <div class="carousel-item {% if forloop.first%} active{% endif %}">
+                        <img src="{{ i.b_image.url }}" alt="no" class="d-block w-100 border" style="height:400px;">
+                        <div class="carousel-caption">
+                            <h1 class="display-4 fw-bold">{{ i.b_title}}</h1>
+                            <p class="lead mt-3">{{i.b_detail}}</p>
+                            <a href="{{i.button_link}}" class="btn btn-primary btn-lg mt-3 px-4">{{i.button_text}}</a>
+                        </div>
+                    </div>
+                    
+                
+                {% endfor %}
+            </div>
+
+
+
+
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2>Shop by Categories</h2>
+            <p>Choose your favourite category</p>
+        </div>
+        <div class="row">
+            {% for i in categories %}
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <div class="card h-100 shadow category-card">
+                    {% if i.category_image %}
+                    
+                        <img src="{{i.category_image.url}}" class="card-img-top" style="height:200px; object-fit:cover" alt="">
+                    
+                    {% endif %}
+                    <div class="card-body txt-center">
+                        <h5 class="card-title">
+                            {{i.category_name}}
+                        </h5>
+                        <a href="{% url 'category_page' i.id %}" class="btn btn-primary">View More</a>
+                    </div>
+                </div>
+                
+
+            </div>
+            
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const carouselElement = document.getElementById("carouselExample");
+
+    if (carouselElement) {
+        new bootstrap.Carousel(carouselElement, {
+            interval: 3000,
+            ride: "carousel"
+        });
+    }
+});
+</script>
+
+
+{% endblock content %}

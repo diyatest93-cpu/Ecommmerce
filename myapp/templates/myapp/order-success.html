@@ -1,0 +1,56 @@
+{% extends "myapp/user_layout.html" %}
+
+{% block title %}Order Successful{% endblock title %}
+
+{% block content %}
+
+<div class="container my-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-7">
+
+            <div class="card shadow text-center">
+
+                <div class="card-body py-5">
+
+                    <div class="mb-4">
+                        <div style="font-size: 70px;">
+                            ✅
+                        </div>
+                    </div>
+
+                    <h2 class="text-success mb-3">
+                        Order Placed Successfully!
+                    </h2>
+
+                    <p class="text-muted mb-4">
+                        Thank you for your order. Your order has been
+                        successfully placed.
+                    </p>
+
+                    <div class="d-flex justify-content-center gap-2">
+
+                        <a href="{% url 'my_orders' %}"
+                           class="btn btn-primary">
+                            View My Orders
+                        </a>
+
+                        <a href="{% url 'user_home' %}"
+                           class="btn btn-outline-secondary">
+                            Continue Shopping
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock content %}

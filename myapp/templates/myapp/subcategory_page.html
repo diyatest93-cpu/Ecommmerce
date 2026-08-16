@@ -1,0 +1,59 @@
+{% extends "myapp/user_layout.html" %}
+
+{% block title %}
+Third Category
+{% endblock title %}
+
+
+{% block content %}
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2>{{ subcat.subcategory_name }}</h2>
+            <p>Select your category</p>
+        </div>
+
+
+        <div class="row">
+
+            {% for i in thirdcategories %}
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <div class="card shadow h-100">
+
+                    <div class="card-body text-center">
+
+                        {% if i.thirdcategory_image %}
+                            <img src="{{ i.thirdcategory_image.url }}" alt="no" height="180" width="80%" class='img-fluid'>
+                        {% endif %}
+
+                        <h5 class="card-title">
+                            {{ i.thirdcategory_name }}
+                        </h5>   
+
+
+
+                        <a href="{% url 'user_product_list' i.id%}" class="btn btn-primary">
+                            View Products
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock content %}

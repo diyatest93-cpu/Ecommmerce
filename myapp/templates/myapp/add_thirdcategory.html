@@ -1,0 +1,36 @@
+{% extends "myapp/admin_layout.html" %}
+{% block title %}Add Thirdcategory{% endblock title %}
+{% block content %}
+
+<div class="conatiner">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h4>Add Thirdcategory</h4>
+        </div>
+        <div class="card-body">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mt-4">
+                    <label class="form-label"> Select Subcategory:</label>
+                    {{form.subcategory}}
+                </div>
+                <div class="mt-4">
+                    <label class="form-label">Thirdcategory Name</label>
+                    {{form.thirdcategory_name}}
+                </div>
+                 <div class="mb-3">
+        <label class="form-label">Thirdcategory Image</label>
+        {{ form.thirdcategory_image }}
+    </div>
+                <div class="mt-4">
+                    <label class="form-label">Status</label>
+                    {{form.status}}
+                </div>
+                <button class="btn btn-primary mt-4">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

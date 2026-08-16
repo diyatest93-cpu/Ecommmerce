@@ -1,0 +1,207 @@
+{% extends "myapp/user_layout.html" %}
+{% block title %}Product Detail{% endblock title %}
+{% block content %}
+
+
+<div class="container my-5">
+    {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert">
+            </button>
+        </div>
+    {% endfor %}
+{% endif %}
+    <div class="card shadow-lg border-0 p-4">
+        <div class="row">
+
+            <!-- Product Image -->
+            <div class="col-lg-5 text-center ">
+                <img src="{{ data.p_image.url }}" class="img-fluid rounded" alt="{{ data.pname }}">
+            </div>
+
+            <!-- Product Details -->
+            <div class="col-lg-7">
+
+                <h2 class="fw-bold">{{ data.pname }}</h2>
+
+                <h5 class="text-secondary">
+                    Brand : {{ data.brand }}
+                </h5>
+
+                <h3 class="text-success my-3">
+                    ₹ {{ data.price }}
+                </h3>
+
+                <p>
+                    <strong>Category :</strong> {{ data.category }}
+                </p>
+
+                <p>
+                    <strong>Sub Category :</strong> {{ data.subcategory }}
+                </p>
+
+                <p>
+                    <strong>Third Category :</strong> {{ data.thirdcategory }}
+                </p>
+
+                <p>
+                    <strong>Rating :</strong>
+                    ⭐ {{ data.p_rating }}/5
+                </p>
+
+                {% if data.stock > 0 %}
+                    <span class="badge bg-success">
+                        In Stock ({{ data.stock }})
+                    </span>
+                {% else %}
+                    <span class="badge bg-danger">
+                        Out of Stock
+                    </span>
+                {% endif %}
+
+                <hr>
+
+                <h5>Description</h5>
+
+                <p class="text-muted">
+                    {{ data.p_detail }}
+                </p>
+
+                <a href="{% url 'add-to_cart' data.id %}" class="btn btn-primary btn-lg mt-3">
+                    Add To Cart
+                </a>
+
+                
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Customer Reviews -->
+<div class="container my-5">
+
+    <div class="card shadow-sm border-0 p-4">
+
+        <h3 class="mb-4">⭐ Customer Reviews</h3>
+
+        <!-- Existing Reviews -->
+        {% for review in reviews %}
+
+            <div class="border-bottom pb-3 mb-3">
+
+                <div class="d-flex justify-content-between">
+
+                    <strong>{{ review.user.username }}</strong>
+
+                    <small class="text-muted">
+                        {{ review.created_at|date:"d M Y" }}
+                    </small>
+
+                </div>
+
+                <div class="my-2">
+                    ⭐ {{ review.rating }}/5
+                </div>
+
+                <p class="mb-0">
+                    {{ review.review }}
+                </p>
+
+            </div>
+
+        {% empty %}
+
+            <p class="text-muted">
+                No reviews yet. Be the first to review this product! 😊
+            </p>
+
+        {% endfor %}
+
+
+        <!-- Add Review -->
+        {% if user.is_authenticated %}
+
+            <hr class="my-4">
+
+            <h4>✍️ Write a Review</h4>
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label class="form-label">Rating (1-5)</label>
+                    {{ review_form.rating }}
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Your Review</label>
+                    {{ review_form.review }}
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Submit Review
+                </button>
+
+            </form>
+
+        {% else %}
+
+            <hr class="my-4">
+
+            <p>
+                Please <a href="{% url 'login' %}">Login</a>
+                to write a review.
+            </p>
+
+        {% endif %}
+
+    </div>
+
+</div>
+<div class="container my-5">
+
+    <h3 class="mb-4">Related Products</h3>
+
+    <div class="row">
+
+        {% for i in related_products %}
+
+        <div class="col-lg-3 col-md-6 mb-4">
+
+            <div class="card h-100">
+
+                <img src="{{ i.p_image.url }}" class="card-img-top" alt="">
+
+                <div class="card-body">
+
+                    <h5>{{ i.pname }}</h5>
+
+                    <p>₹ {{ i.price }}</p>
+
+                    <a href="{% url 'product_detail' i.id %}" class="btn btn-primary">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <h5>No Related Products Found.</h5>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock content %}

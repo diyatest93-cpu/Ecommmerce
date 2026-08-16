@@ -1,0 +1,97 @@
+{% extends "myapp/admin_layout.html" %}
+{% block title %}Add Product{% endblock title %}
+{% block content %}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h4>Add Products</h4>
+        </div>
+        <div class="card-body">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+       
+        <div class="mt-4">
+            <label class="label-form m-3">Select Category:</label>
+            {{form.category}}
+        </div>
+        <div class="mt-4">
+            <label class="label-form m-3">Select Subcategory:</label>
+            {{form.subcategory}}
+        </div>
+        <div class="mt-4">
+            <label class="label-form m-3">Select Thirdcategory:</label>
+            {{form.thirdcategory}}
+        </div>
+        <div class="mt-4">
+            <label class="label-form m-3">Product Name:</label>
+            {{form.pname}}
+        </div>
+        <div class="mt-4">
+            <label class="label-form m-3">Product Brand:</label>
+            {{form.brand}}
+        </div>
+         
+        <div class="mt-4">
+            <label class="label-form m-3">Product price:</label>
+            {{form.price}}
+        </div>
+        <div class="mt-4">
+            <label class="label-form m-3">Prodct Description:</label>
+            {{form.p_detail}}
+        </div>
+        
+        <div class="mt-4">
+            <label class="label-form m-3"> Select Prodct Image:</label>
+            {{form.p_image}}
+        </div>
+        <div class="mt-4">
+            <label class="label-form m-3">Prodct Rating:</label>
+            {{form.p_rating}}
+        </div>
+        <div class="mt-4">
+            <label class="label-form m-3">Prodct Status:</label>
+            {{form.status}}
+        </div>
+        <div class="mt-4">
+            <label class="label-form m-3">Prodct Stock:</label>
+            {{form.stock}}
+        </div>
+        <button class="btn btn-primary m-4">
+           Save
+        </button>
+        </form>
+    </div>
+    </div>
+</div>
+
+
+
+<script>
+    document.getElementById('id_category').addEventListener('change', function(){
+        var category_id=this.value;
+        fetch('/get_subcategory/?category_id='+category_id).then(response => response.json())
+        .then(data =>{
+            var subcategory=document.getElementById('id_subcategory');
+            subcategory.innerHTML='<option value=""> Select Subcategory</option>';
+            data.forEach(function(item){
+                subcategory.innerHTML+=`<option value="${item.id}">${item.name}</option>`
+            });
+        });
+    });
+    
+    document.getElementById('id_subcategory').addEventListener('change', function(){
+        var subcategory_id=this.value;
+        fetch('/get_thirdcategory/?subcategory_id=' +subcategory_id).then(response => response.json())
+        .then(data =>{
+            var Thirdcategory=document.getElementById('id_thirdcategory')
+            Thirdcategory.innerHTML='<option value=""> Select Thirdcategory </option>';
+            data.forEach(function (item){
+                Thirdcategory.innerHTML+=`<option value= "${item.id}"> ${item.name}</option>`
+            });
+        });
+    });
+
+</script>
+{% endblock content %}

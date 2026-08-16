@@ -1,0 +1,83 @@
+{% extends "myapp/admin_layout.html" %}
+{% block title %}Category List{% endblock title %}
+{% block content %}
+
+
+
+<div class="conatiner-mt-4">
+    <div class="d-flex">
+        <button class="btn btn-primary ms-auto m-4"> <a href="{% url 'add_category'%}" class="text-white a"> + Add</a></button>
+    </div>
+    {% if messages %} {% for message in messages %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
+
+  {% endfor %} {% endif %}
+    <div class="card">
+        <div class="card-body">
+            
+            <div class="d-flex justify-content-between align-items-center mb-3">
+
+    <h4 class="mb-0">Category list</h4>
+
+    <form method="GET" class="d-flex">
+        <input
+            type="search"
+            name="q"
+            value="{{ query }}"
+            class="form-control"
+            placeholder="Search category..."
+            style="width: 250px;"
+        >
+
+        <button type="submit" class="btn btn-primary ms-2">
+            🔍 Search
+        </button>
+
+        {% if query %}
+            <a href="{% url 'category_list' %}"
+               class="btn btn-outline-secondary ms-2">
+                Clear
+            </a>
+        {% endif %}
+    </form>
+
+</div>
+            <table class="table table-borderded table-striped">
+                <tr> 
+                    <td>Id</td>
+                    <td>Category_image</td>
+                    <td>Category Name</td>
+                    <td>status</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+                </tr>
+                {% for cat in data %}
+                <tr>
+                    <td>{{cat.id}}</td>
+                    <td>{% if cat.category_image %}
+                        <img src="{{cat.category_image.url}}" alt="no" class="card-img-top" style="width:100px; height:100px;">
+                        {% endif %}</td>
+                    <td>{{cat.category_name}}</td>
+                    <td>{{cat.status}}</td>
+                    <td>
+                        <button class="btn btn-primary text-white">
+                            <a href="{% url 'edit_category' cat.id %}" class="text-white a">Edit</a>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger text-white">
+                            <a href="{% url 'delete_category' cat.id %}" class="text-white a">Delete</a>
+                        </button>
+                    </td>
+                </tr>
+                
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

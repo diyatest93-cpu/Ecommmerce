@@ -1,0 +1,82 @@
+{% extends "myapp/admin_layout.html" %}
+
+{% block title %}Edit Banner{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <div class="card">
+
+        <div class="card-header bg-primary text-white">
+            <h4>Edit Banner</h4>
+        </div>
+
+        <div class="card-body">
+
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <!-- Banner Title -->
+                <div class="mb-4">
+                    <label class="form-label">Banner Title</label>
+                    {{ form.b_title }}
+                </div>
+
+                <!-- Banner Description -->
+                <div class="mb-4">
+                    <label class="form-label">Banner Description</label>
+                    {{ form.b_detail }}
+                </div>
+
+                <!-- Banner Image -->
+                <div class="mb-4">
+                    <label class="form-label">Banner Image</label>
+
+                    {% if form.instance.b_image %}
+                        <div class="mb-2">
+                            <img src="{{ form.instance.b_image.url }}"
+                                 width="250"
+                                 height="100"
+                                 style="object-fit: cover;"
+                                 class="rounded">
+                        </div>
+                    {% endif %}
+
+                    {{ form.b_image }}
+                </div>
+
+                <!-- Button Text -->
+                <div class="mb-4">
+                    <label class="form-label">Button Text</label>
+                    {{ form.button_text }}
+                </div>
+
+                <!-- Button Link -->
+                <div class="mb-4">
+                    <label class="form-label">Button Link</label>
+                    {{ form.button_link }}
+                </div>
+
+                <!-- Status -->
+                <div class="mb-4">
+                    <label class="form-label">Status</label>
+                    {{ form.status }}
+                </div>
+
+                <!-- Save Button -->
+                <button type="submit" class="btn btn-primary">
+                    Save
+                </button>
+
+                <a href="{% url 'banner_list' %}"
+                   class="btn btn-secondary">
+                    Cancel
+                </a>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

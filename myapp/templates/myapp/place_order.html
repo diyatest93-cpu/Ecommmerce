@@ -7,7 +7,7 @@
 
     <h2 class="text-center mb-4">Place Your Order</h2>
 
-    <form method="POST">
+    <form method="POST" action="{% url 'place_order'%}">
         {% csrf_token %}
 
         <div class="row">

@@ -22,7 +22,7 @@
 
                 <div class="card-body">
 
-                    <form method="POST">
+                    <form method="POST" action="{% url 'checkout'%}">
                         {% csrf_token %}
 
                         <div class="mb-3">

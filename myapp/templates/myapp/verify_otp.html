@@ -40,7 +40,7 @@
         {% endif %}
 
 
-        <form method="POST">
+        <form method="POST" action="{% url 'verify_otp'%}">
 
             {% csrf_token %}
 

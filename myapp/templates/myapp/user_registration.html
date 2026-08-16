@@ -28,7 +28,7 @@
 
                 <div class="card-body p-4">
 
-                    <form method="POST">
+                    <form method="POST" action="{% url 'user_registration'%}">
 
                         {% csrf_token %}
 

@@ -21,7 +21,7 @@
                         <div class="div">
                         
                         {% if i.subcategory_image %}
-                            <img src="{{ i.subcategory_image.url }}" alt="no" height="190" width="200" class="img-fluid shadow-sm">
+                            <img src="{% static 'media/' %}{{ i.subcategory_image.name }}" alt="no" height="190" width="200" class="img-fluid shadow-sm">
                         {% endif %}
                         </div>
                         <a href="{% url 'subcategory_page' i.id%}" class="btn btn-primary">View Products</a>

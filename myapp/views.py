@@ -520,7 +520,7 @@ def user_home(request):
     return render(request, 'myapp/user_home.html', context)
 
 def category_page(request, id):
-    cat=category.objects.get(id=id)
+    cat=get_object_or_404(category, id=id)
     subcategories=subcategory.objects.filter(category=cat)
 
     context={

@@ -1,0 +1,1344 @@
+[
+{
+  "model": "myapp.category",
+  "pk": 4,
+  "fields": {
+    "category_name": "Men",
+    "category_image": "category/Men.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.category",
+  "pk": 5,
+  "fields": {
+    "category_name": "women",
+    "category_image": "category/women.jpg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.category",
+  "pk": 7,
+  "fields": {
+    "category_name": "Electronics",
+    "category_image": "category/hero_uGAluRQ.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.category",
+  "pk": 11,
+  "fields": {
+    "category_name": "Home & Furniture",
+    "category_image": "category/furniture.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.subcategory",
+  "pk": 1,
+  "fields": {
+    "category": 7,
+    "subcategory_name": "laptop",
+    "subcategory_image": "subcategory/assus.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.subcategory",
+  "pk": 3,
+  "fields": {
+    "category": 7,
+    "subcategory_name": "Mobiles",
+    "subcategory_image": "subcategory/mobiles.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.subcategory",
+  "pk": 4,
+  "fields": {
+    "category": 7,
+    "subcategory_name": "Headphones",
+    "subcategory_image": "subcategory/headphones.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.subcategory",
+  "pk": 5,
+  "fields": {
+    "category": 7,
+    "subcategory_name": "Smart watches",
+    "subcategory_image": "subcategory/smartwatches.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.subcategory",
+  "pk": 6,
+  "fields": {
+    "category": 4,
+    "subcategory_name": "T-Shirts",
+    "subcategory_image": "subcategory/m-tshirts.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.subcategory",
+  "pk": 7,
+  "fields": {
+    "category": 4,
+    "subcategory_name": "Shirts",
+    "subcategory_image": "subcategory/m-shirts.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.subcategory",
+  "pk": 8,
+  "fields": {
+    "category": 4,
+    "subcategory_name": "Jeans",
+    "subcategory_image": "subcategory/m-jeans.jpg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.subcategory",
+  "pk": 9,
+  "fields": {
+    "category": 5,
+    "subcategory_name": "Dresses",
+    "subcategory_image": "subcategory/dreesses.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.subcategory",
+  "pk": 10,
+  "fields": {
+    "category": 5,
+    "subcategory_name": "Kurtis",
+    "subcategory_image": "subcategory/kutrtis.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.subcategory",
+  "pk": 11,
+  "fields": {
+    "category": 5,
+    "subcategory_name": "Jeans",
+    "subcategory_image": "subcategory/w-jeans.jpg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.subcategory",
+  "pk": 12,
+  "fields": {
+    "category": 11,
+    "subcategory_name": "Kitchen",
+    "subcategory_image": "subcategory/kiten.jpg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.subcategory",
+  "pk": 13,
+  "fields": {
+    "category": 11,
+    "subcategory_name": "Decore",
+    "subcategory_image": "subcategory/decore.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.subcategory",
+  "pk": 14,
+  "fields": {
+    "category": 11,
+    "subcategory_name": "Bedding",
+    "subcategory_image": "subcategory/bedding.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 1,
+  "fields": {
+    "subcategory": 1,
+    "thirdcategory_name": "HP Gaming Laptop",
+    "thirdcategory_image": "thirdcategory/gaming_laptop.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 2,
+  "fields": {
+    "subcategory": 1,
+    "thirdcategory_name": "Office-Based laptop",
+    "thirdcategory_image": "thirdcategory/office_lap.jpg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 3,
+  "fields": {
+    "subcategory": 3,
+    "thirdcategory_name": "SmartPhones",
+    "thirdcategory_image": "thirdcategory/smartphones1.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 4,
+  "fields": {
+    "subcategory": 3,
+    "thirdcategory_name": "Featured Phones",
+    "thirdcategory_image": "thirdcategory/featured-phone.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 5,
+  "fields": {
+    "subcategory": 4,
+    "thirdcategory_name": "Wireless",
+    "thirdcategory_image": "thirdcategory/wireless.jpg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 6,
+  "fields": {
+    "subcategory": 4,
+    "thirdcategory_name": "TWS",
+    "thirdcategory_image": "thirdcategory/twS.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 7,
+  "fields": {
+    "subcategory": 5,
+    "thirdcategory_name": "Fitness Watch",
+    "thirdcategory_image": "thirdcategory/fitness.jpg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 8,
+  "fields": {
+    "subcategory": 5,
+    "thirdcategory_name": "Smart Watches",
+    "thirdcategory_image": "thirdcategory/smartwatch.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 9,
+  "fields": {
+    "subcategory": 6,
+    "thirdcategory_name": "Casual T-shirts",
+    "thirdcategory_image": "thirdcategory/casual-tshirts.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 10,
+  "fields": {
+    "subcategory": 6,
+    "thirdcategory_name": "Polo T-shirts",
+    "thirdcategory_image": "thirdcategory/t-shirts-polo.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 11,
+  "fields": {
+    "subcategory": 7,
+    "thirdcategory_name": "casual Shirts",
+    "thirdcategory_image": "thirdcategory/casual-shirt.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 12,
+  "fields": {
+    "subcategory": 7,
+    "thirdcategory_name": "Formal shirts",
+    "thirdcategory_image": "thirdcategory/formal_shirts.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 13,
+  "fields": {
+    "subcategory": 8,
+    "thirdcategory_name": "Slim Fit",
+    "thirdcategory_image": "thirdcategory/slimfit.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 14,
+  "fields": {
+    "subcategory": 8,
+    "thirdcategory_name": "Regular Fit",
+    "thirdcategory_image": "thirdcategory/reg-fit.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 15,
+  "fields": {
+    "subcategory": 9,
+    "thirdcategory_name": "Casual Dresses",
+    "thirdcategory_image": "thirdcategory/cas-dess.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 16,
+  "fields": {
+    "subcategory": 9,
+    "thirdcategory_name": "Party Dresses",
+    "thirdcategory_image": "thirdcategory/party-dress.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 17,
+  "fields": {
+    "subcategory": 10,
+    "thirdcategory_name": "Printed Kurti",
+    "thirdcategory_image": "thirdcategory/printed-kurti.jpg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 18,
+  "fields": {
+    "subcategory": 10,
+    "thirdcategory_name": "Anarkali",
+    "thirdcategory_image": "thirdcategory/anarkali.jpg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 19,
+  "fields": {
+    "subcategory": 11,
+    "thirdcategory_name": "Skinny Jeans",
+    "thirdcategory_image": "thirdcategory/skinny-women.jpg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 20,
+  "fields": {
+    "subcategory": 11,
+    "thirdcategory_name": "Straight Jeans",
+    "thirdcategory_image": "thirdcategory/staright-women.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 21,
+  "fields": {
+    "subcategory": 12,
+    "thirdcategory_name": "Cookware",
+    "thirdcategory_image": "thirdcategory/cookware.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 22,
+  "fields": {
+    "subcategory": 12,
+    "thirdcategory_name": "Appliances",
+    "thirdcategory_image": "thirdcategory/appliance.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 23,
+  "fields": {
+    "subcategory": 13,
+    "thirdcategory_name": "Wall Decore",
+    "thirdcategory_image": "thirdcategory/walldeocre.jpg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 24,
+  "fields": {
+    "subcategory": 13,
+    "thirdcategory_name": "Lighting",
+    "thirdcategory_image": "thirdcategory/lighting.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 25,
+  "fields": {
+    "subcategory": 14,
+    "thirdcategory_name": "Bedsheets",
+    "thirdcategory_image": "thirdcategory/bedsheet.jpeg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.thirdcategory",
+  "pk": 26,
+  "fields": {
+    "subcategory": 14,
+    "thirdcategory_name": "organizers",
+    "thirdcategory_image": "thirdcategory/organizers.jpg",
+    "status": true
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 1,
+  "fields": {
+    "category": 7,
+    "subcategory": 1,
+    "thirdcategory": 1,
+    "pname": "HP Galaxy Z Fold 7",
+    "brand": "HP",
+    "price": "500000.00",
+    "p_detail": "aaa",
+    "p_image": "images/gaming_laptop.jpeg",
+    "p_rating": "4.5",
+    "status": true,
+    "stock": 0,
+    "created_at": "2026-08-01T05:52:37.865Z",
+    "updated_at": "2026-08-15T14:42:18.223Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 2,
+  "fields": {
+    "category": 7,
+    "subcategory": 1,
+    "thirdcategory": 2,
+    "pname": "Assus laptop A23",
+    "brand": "Assus",
+    "price": "450000.00",
+    "p_detail": "A Good well-maintained office base laptop",
+    "p_image": "images/assus.jpeg",
+    "p_rating": "4.1",
+    "status": true,
+    "stock": 33,
+    "created_at": "2026-08-04T13:33:38.662Z",
+    "updated_at": "2026-08-13T11:49:46.425Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 3,
+  "fields": {
+    "category": 7,
+    "subcategory": 1,
+    "thirdcategory": 1,
+    "pname": "lenovo LOQ Gming laptop",
+    "brand": "Lenovo",
+    "price": "89990.00",
+    "p_detail": "Performance-focused gaming laptop with AMD Ryzen processor, NVIDIA GeForce RTX graphics, 15.6-inch Full HD display and 16GB RAM. Suitable for gaming and multitasking.",
+    "p_image": "images/lenovo_gaming.jpeg",
+    "p_rating": "4.1",
+    "status": true,
+    "stock": 26,
+    "created_at": "2026-08-11T13:59:26.683Z",
+    "updated_at": "2026-08-11T13:59:26.684Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 4,
+  "fields": {
+    "category": 7,
+    "subcategory": 1,
+    "thirdcategory": 1,
+    "pname": "HP victus Gaming 15",
+    "brand": "HP",
+    "price": "79990.00",
+    "p_detail": "Stylish gaming laptop featuring AMD Ryzen processor, NVIDIA GeForce RTX graphics, 15.6-inch Full HD display and 16GB RAM. Great choice for gaming and everyday performance.",
+    "p_image": "images/HP_victus.jpeg",
+    "p_rating": "4.6",
+    "status": true,
+    "stock": 10,
+    "created_at": "2026-08-11T14:00:52.742Z",
+    "updated_at": "2026-08-11T14:00:52.742Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 5,
+  "fields": {
+    "category": 7,
+    "subcategory": 1,
+    "thirdcategory": 2,
+    "pname": "HP 15s",
+    "brand": "HP",
+    "price": "59990.00",
+    "p_detail": "Reliable office laptop with Intel Core i5 processor, 15.6-inch Full HD display, 16GB RAM and fast SSD storage. Suitable for office work, browsing, online meetings and multitasking.",
+    "p_image": "images/hpoffice.jpg",
+    "p_rating": "4.8",
+    "status": true,
+    "stock": 40,
+    "created_at": "2026-08-11T14:03:07.943Z",
+    "updated_at": "2026-08-11T14:03:50.620Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 6,
+  "fields": {
+    "category": 7,
+    "subcategory": 1,
+    "thirdcategory": 2,
+    "pname": "Dell Inspiron 15",
+    "brand": "Dell",
+    "price": "55500.00",
+    "p_detail": "Professional everyday laptop with Intel Core i5 processor, 15.6-inch Full HD display, 16GB RAM and SSD storage. Designed for productivity, video calls and business tasks.",
+    "p_image": "images/Dell.jpg",
+    "p_rating": "4.8",
+    "status": true,
+    "stock": 47,
+    "created_at": "2026-08-11T14:05:35.340Z",
+    "updated_at": "2026-08-11T14:05:35.341Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 7,
+  "fields": {
+    "category": 7,
+    "subcategory": 3,
+    "thirdcategory": 3,
+    "pname": "Galaxy A55 5G",
+    "brand": "Samsung",
+    "price": "20000.00",
+    "p_detail": "Premium mid-range smartphone with a vibrant AMOLED display, powerful processor, advanced camera system and long-lasting battery",
+    "p_image": "images/galaxya55.jpeg",
+    "p_rating": "4.9",
+    "status": true,
+    "stock": 119,
+    "created_at": "2026-08-11T14:14:28.295Z",
+    "updated_at": "2026-08-12T04:56:06.285Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 8,
+  "fields": {
+    "category": 7,
+    "subcategory": 3,
+    "thirdcategory": 3,
+    "pname": "iPhone 15",
+    "brand": "Apple",
+    "price": "79900.00",
+    "p_detail": "Powerful smartphone with a Super Retina display, advanced dual-camera system, fast performance and excellent battery efficiency.",
+    "p_image": "images/IPhone_15.jpeg",
+    "p_rating": "4.2",
+    "status": true,
+    "stock": 100,
+    "created_at": "2026-08-11T14:15:54.149Z",
+    "updated_at": "2026-08-11T14:15:54.149Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 9,
+  "fields": {
+    "category": 7,
+    "subcategory": 3,
+    "thirdcategory": 4,
+    "pname": "Nokia 2660 Flip",
+    "brand": "Nokia",
+    "price": "4499.00",
+    "p_detail": "Stylish flip feature phone with a large keypad, clear display, long battery life and convenient flip design.",
+    "p_image": "images/Nokia2660.jpeg",
+    "p_rating": "4.4",
+    "status": true,
+    "stock": 80,
+    "created_at": "2026-08-11T14:17:16.492Z",
+    "updated_at": "2026-08-11T14:17:16.492Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 10,
+  "fields": {
+    "category": 7,
+    "subcategory": 3,
+    "thirdcategory": 4,
+    "pname": "Samsung Guru Music 2",
+    "brand": "Samsung",
+    "price": "2199.00",
+    "p_detail": "Simple and easy-to-use feature phone with physical keypad, compact design, music support and long-lasting battery.",
+    "p_image": "images/featured_phone.jpeg",
+    "p_rating": "4.6",
+    "status": true,
+    "stock": 60,
+    "created_at": "2026-08-11T14:19:46.919Z",
+    "updated_at": "2026-08-11T14:19:46.919Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 11,
+  "fields": {
+    "category": 7,
+    "subcategory": 5,
+    "thirdcategory": 8,
+    "pname": "Apple Watch SE",
+    "brand": "Apple",
+    "price": "29900.00",
+    "p_detail": "Stylish smartwatch with fitness tracking, heart-rate monitoring, activity tracking, notifications and seamless iPhone connectivity.",
+    "p_image": "images/smartwatch.jpeg",
+    "p_rating": "4.5",
+    "status": true,
+    "stock": 240,
+    "created_at": "2026-08-11T14:29:59.690Z",
+    "updated_at": "2026-08-11T14:29:59.690Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 12,
+  "fields": {
+    "category": 7,
+    "subcategory": 5,
+    "thirdcategory": 8,
+    "pname": "Samsung Galaxy Watch6",
+    "brand": "Samsung",
+    "price": "24999.00",
+    "p_detail": "Premium smartwatch with AMOLED display, fitness and sleep tracking, heart-rate monitoring, GPS and smart notifications.",
+    "p_image": "images/smartwatch_Rsggx25.jpeg",
+    "p_rating": "4.6",
+    "status": true,
+    "stock": 23,
+    "created_at": "2026-08-11T14:31:55.102Z",
+    "updated_at": "2026-08-11T14:31:55.102Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 13,
+  "fields": {
+    "category": 7,
+    "subcategory": 5,
+    "thirdcategory": 7,
+    "pname": "Fitbit Charge 6",
+    "brand": "Fitbit",
+    "price": "14999.00",
+    "p_detail": "Advanced fitness tracker with heart-rate monitoring, activity tracking, sleep tracking, built-in GPS and multiple workout modes.",
+    "p_image": "images/fitbit.jpg",
+    "p_rating": "4.1",
+    "status": true,
+    "stock": 56,
+    "created_at": "2026-08-11T14:33:26.524Z",
+    "updated_at": "2026-08-11T14:33:26.524Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 14,
+  "fields": {
+    "category": 7,
+    "subcategory": 5,
+    "thirdcategory": 7,
+    "pname": "Xiaomi Smart Band 9",
+    "brand": "Xiaomi",
+    "price": "3499.00",
+    "p_detail": "Lightweight fitness band with AMOLED display, activity tracking, heart-rate monitoring, sleep tracking and multiple sports modes.",
+    "p_image": "images/xiaomi.png",
+    "p_rating": "4.1",
+    "status": true,
+    "stock": 33,
+    "created_at": "2026-08-11T14:34:51.477Z",
+    "updated_at": "2026-08-13T11:49:46.455Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 15,
+  "fields": {
+    "category": 7,
+    "subcategory": 4,
+    "thirdcategory": 5,
+    "pname": "OnePlus Bullets Wireless Z2",
+    "brand": "OnePlus",
+    "price": "1999.00",
+    "p_detail": "Wireless neckband with powerful bass, clear calling, low-latency mode and long battery life.",
+    "p_image": "images/oneplus.jpeg",
+    "p_rating": "4.1",
+    "status": true,
+    "stock": 34,
+    "created_at": "2026-08-11T14:39:49.088Z",
+    "updated_at": "2026-08-11T14:39:49.088Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 16,
+  "fields": {
+    "category": 7,
+    "subcategory": 4,
+    "thirdcategory": 5,
+    "pname": "boAt Rockerz 255 Pro+",
+    "brand": "boAt",
+    "price": "1499.00",
+    "p_detail": "Wireless neckband with immersive audio, environmental noise cancellation, fast charging and long playback time.",
+    "p_image": "images/boat-worelss.jpeg",
+    "p_rating": "4.6",
+    "status": true,
+    "stock": 67,
+    "created_at": "2026-08-11T14:41:14.317Z",
+    "updated_at": "2026-08-11T14:41:14.317Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 17,
+  "fields": {
+    "category": 7,
+    "subcategory": 4,
+    "thirdcategory": 6,
+    "pname": "Apple AirPods 4",
+    "brand": "Apple",
+    "price": "12900.00",
+    "p_detail": "Wireless earbuds with clear audio, comfortable open-ear design, seamless Apple connectivity and voice assistant support.",
+    "p_image": "images/appletws.jpeg",
+    "p_rating": "4.0",
+    "status": true,
+    "stock": 34,
+    "created_at": "2026-08-11T14:45:03.364Z",
+    "updated_at": "2026-08-11T14:45:03.364Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 18,
+  "fields": {
+    "category": 7,
+    "subcategory": 4,
+    "thirdcategory": 6,
+    "pname": "boAt Airdopes 141",
+    "brand": "boAt",
+    "price": "1299.00",
+    "p_detail": "Affordable TWS earbuds with powerful sound, low-latency mode, comfortable fit and long playback with charging case.",
+    "p_image": "images/boattws.jpg",
+    "p_rating": "3.9",
+    "status": true,
+    "stock": 76,
+    "created_at": "2026-08-11T14:46:17.267Z",
+    "updated_at": "2026-08-11T14:46:17.267Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 19,
+  "fields": {
+    "category": 4,
+    "subcategory": 6,
+    "thirdcategory": 9,
+    "pname": "Classic Cotton Crew Neck T-Shirt",
+    "brand": "H&M",
+    "price": "999.00",
+    "p_detail": "Soft cotton casual T-shirt with a regular fit and comfortable round neck, perfect for everyday wear.",
+    "p_image": "images/crewnecktshirt.jpeg",
+    "p_rating": "3.1",
+    "status": true,
+    "stock": 89,
+    "created_at": "2026-08-11T16:13:29.572Z",
+    "updated_at": "2026-08-11T16:13:29.573Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 20,
+  "fields": {
+    "category": 4,
+    "subcategory": 6,
+    "thirdcategory": 9,
+    "pname": "Printed Casual T-Shirt",
+    "brand": "Roadster",
+    "price": "799.00",
+    "p_detail": "Comfortable cotton-blend T-shirt with a stylish graphic print and regular fit, suitable for casual outings.",
+    "p_image": "images/printedtshirt.jpeg",
+    "p_rating": "4.5",
+    "status": true,
+    "stock": 78,
+    "created_at": "2026-08-11T16:14:49.775Z",
+    "updated_at": "2026-08-11T16:14:49.775Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 21,
+  "fields": {
+    "category": 4,
+    "subcategory": 6,
+    "thirdcategory": 10,
+    "pname": "Solid Polo T-Shirt",
+    "brand": "Allen Solly",
+    "price": "1499.00",
+    "p_detail": "Smart casual polo T-shirt with a classic collar, comfortable fabric and regular fit, suitable for casual and semi-formal occasions.",
+    "p_image": "images/t-shirts-polo.jpeg",
+    "p_rating": "4.5",
+    "status": true,
+    "stock": 90,
+    "created_at": "2026-08-11T16:16:21.504Z",
+    "updated_at": "2026-08-11T16:16:21.504Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 22,
+  "fields": {
+    "category": 4,
+    "subcategory": 6,
+    "thirdcategory": 10,
+    "pname": "Cotton Polo T-Shirt",
+    "brand": "US Polo Assn.",
+    "price": "1699.00",
+    "p_detail": "Classic cotton polo featuring a comfortable fit, ribbed collar and timeless design for everyday wear.",
+    "p_image": "images/cottonpolo.jpg",
+    "p_rating": "3.4",
+    "status": true,
+    "stock": 70,
+    "created_at": "2026-08-11T16:17:36.639Z",
+    "updated_at": "2026-08-11T16:17:36.639Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 23,
+  "fields": {
+    "category": 4,
+    "subcategory": 7,
+    "thirdcategory": 11,
+    "pname": "Checked Casual Shirt",
+    "brand": "Roadster",
+    "price": "1199.00",
+    "p_detail": "Comfortable cotton casual shirt with a stylish checked pattern, regular fit and button closure, perfect for everyday outings.",
+    "p_image": "images/checkedshirt.jpeg",
+    "p_rating": "4.2",
+    "status": true,
+    "stock": 20,
+    "created_at": "2026-08-11T16:19:51.297Z",
+    "updated_at": "2026-08-11T16:19:51.297Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 24,
+  "fields": {
+    "category": 4,
+    "subcategory": 7,
+    "thirdcategory": 11,
+    "pname": "Printed Casual Shirt",
+    "brand": "Levi's",
+    "price": "1499.00",
+    "p_detail": "Lightweight casual shirt with a trendy printed pattern, relaxed fit and comfortable fabric, ideal for weekend outings.",
+    "p_image": "images/printedshirt.jpeg",
+    "p_rating": "3.9",
+    "status": true,
+    "stock": 90,
+    "created_at": "2026-08-11T16:21:42.543Z",
+    "updated_at": "2026-08-11T16:21:42.543Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 25,
+  "fields": {
+    "category": 4,
+    "subcategory": 7,
+    "thirdcategory": 12,
+    "pname": "Slim Fit Formal Shirt",
+    "brand": "Van Heusen",
+    "price": "1799.00",
+    "p_detail": "Premium formal shirt with a clean solid design, slim fit and comfortable fabric, ideal for office and business occasions.",
+    "p_image": "images/slimfitshirt.jpeg",
+    "p_rating": "3.0",
+    "status": true,
+    "stock": 34,
+    "created_at": "2026-08-11T16:23:12.761Z",
+    "updated_at": "2026-08-11T16:23:12.761Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 26,
+  "fields": {
+    "category": 4,
+    "subcategory": 7,
+    "thirdcategory": 12,
+    "pname": "Solid Formal Shirt",
+    "brand": "Peter England",
+    "price": "1398.00",
+    "p_detail": "Comfortable formal shirt with a simple solid design, regular fit and classic styling, perfect for office and meetings.",
+    "p_image": "images/regularfit.jpeg",
+    "p_rating": "4.6",
+    "status": true,
+    "stock": 90,
+    "created_at": "2026-08-11T16:25:41.160Z",
+    "updated_at": "2026-08-11T16:25:41.160Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 27,
+  "fields": {
+    "category": 4,
+    "subcategory": 8,
+    "thirdcategory": 13,
+    "pname": "511 Slim Fit Jeans",
+    "brand": "Levi's",
+    "price": "2999.00",
+    "p_detail": "Stylish slim-fit jeans made with comfortable stretch denim, featuring a modern silhouette suitable for everyday wear.",
+    "p_image": "images/511.jpeg",
+    "p_rating": "3.9",
+    "status": true,
+    "stock": 90,
+    "created_at": "2026-08-11T16:26:59.874Z",
+    "updated_at": "2026-08-11T16:26:59.874Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 28,
+  "fields": {
+    "category": 4,
+    "subcategory": 8,
+    "thirdcategory": 13,
+    "pname": "Slim Tapered Jeans",
+    "brand": "Jack & Jones",
+    "price": "2499.00",
+    "p_detail": "Modern slim-tapered jeans with stretch fabric, a clean finish and comfortable fit for casual styling.",
+    "p_image": "images/slimfit.jpeg",
+    "p_rating": "4.5",
+    "status": true,
+    "stock": 95,
+    "created_at": "2026-08-11T16:28:45.255Z",
+    "updated_at": "2026-08-11T16:28:45.255Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 29,
+  "fields": {
+    "category": 4,
+    "subcategory": 8,
+    "thirdcategory": 14,
+    "pname": "501 Original Fit Jeans",
+    "brand": "Levi's",
+    "price": "3499.00",
+    "p_detail": "Classic regular-fit jeans with durable denim, timeless five-pocket design and comfortable everyday styling.",
+    "p_image": "images/ofit.jpg",
+    "p_rating": "4.4",
+    "status": true,
+    "stock": 20,
+    "created_at": "2026-08-11T16:30:14.818Z",
+    "updated_at": "2026-08-11T16:30:14.818Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 30,
+  "fields": {
+    "category": 4,
+    "subcategory": 8,
+    "thirdcategory": 14,
+    "pname": "Regular Fit Mid-Rise Jeans",
+    "brand": "Pepe Jeans",
+    "price": "2299.00",
+    "p_detail": "Comfortable regular-fit jeans featuring durable denim, classic styling and a versatile design for everyday wear.",
+    "p_image": "images/regfit.jpeg",
+    "p_rating": "3.8",
+    "status": true,
+    "stock": 90,
+    "created_at": "2026-08-11T16:31:28.772Z",
+    "updated_at": "2026-08-11T16:31:28.772Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 31,
+  "fields": {
+    "category": 5,
+    "subcategory": 9,
+    "thirdcategory": 15,
+    "pname": "Floral Midi Dress",
+    "brand": "H&M",
+    "price": "1999.00",
+    "p_detail": "Comfortable floral-print midi dress with a relaxed fit and lightweight fabric, perfect for casual outings and everyday wear.",
+    "p_image": "images/midid.jpeg",
+    "p_rating": "3.4",
+    "status": true,
+    "stock": 90,
+    "created_at": "2026-08-12T03:43:47.433Z",
+    "updated_at": "2026-08-12T03:43:47.433Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 32,
+  "fields": {
+    "category": 5,
+    "subcategory": 9,
+    "thirdcategory": 15,
+    "pname": "Cotton A-Line Dress",
+    "brand": "ONLY",
+    "price": "1799.00",
+    "p_detail": "Stylish A-line casual dress made with soft fabric, featuring a comfortable fit and simple design for everyday occasions.",
+    "p_image": "images/aline.jpeg",
+    "p_rating": "3.5",
+    "status": true,
+    "stock": 90,
+    "created_at": "2026-08-12T03:47:26.417Z",
+    "updated_at": "2026-08-12T03:47:26.417Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 33,
+  "fields": {
+    "category": 5,
+    "subcategory": 9,
+    "thirdcategory": 16,
+    "pname": "Sequin Party Dress",
+    "brand": "ONLY",
+    "price": "3499.00",
+    "p_detail": "Stylish party dress featuring elegant sequin detailing, a flattering fit and glamorous design, perfect for evening events.",
+    "p_image": "images/seq.jpeg",
+    "p_rating": "3.2",
+    "status": true,
+    "stock": 90,
+    "created_at": "2026-08-12T03:49:20.752Z",
+    "updated_at": "2026-08-12T03:49:20.752Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 34,
+  "fields": {
+    "category": 5,
+    "subcategory": 9,
+    "thirdcategory": 16,
+    "pname": "Bodycon Party Dress",
+    "brand": "Vero Moda",
+    "price": "2999.00",
+    "p_detail": "Trendy bodycon dress with a sleek silhouette and comfortable stretch fabric, ideal for parties and special occasions.",
+    "p_image": "images/bodycon.jpeg",
+    "p_rating": "4.0",
+    "status": true,
+    "stock": 600,
+    "created_at": "2026-08-12T03:50:48.132Z",
+    "updated_at": "2026-08-12T03:50:48.132Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 35,
+  "fields": {
+    "category": 5,
+    "subcategory": 10,
+    "thirdcategory": 17,
+    "pname": "Floral Printed Cotton Kurti",
+    "brand": "Biba",
+    "price": "1499.00",
+    "p_detail": "Comfortable cotton kurti featuring a beautiful floral print, round neck and regular fit, perfect for everyday ethnic wear.",
+    "p_image": "images/printed-kurti.jpg",
+    "p_rating": "3.8",
+    "status": true,
+    "stock": 900,
+    "created_at": "2026-08-12T03:52:27.719Z",
+    "updated_at": "2026-08-12T03:52:27.719Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 36,
+  "fields": {
+    "category": 5,
+    "subcategory": 10,
+    "thirdcategory": 17,
+    "pname": "Printed Straight Kurti",
+    "brand": "Aurelia",
+    "price": "1299.00",
+    "p_detail": "Stylish straight-fit kurti with an elegant all-over print and comfortable fabric, ideal for office and casual occasions.",
+    "p_image": "images/pristr.jpg",
+    "p_rating": "4.5",
+    "status": true,
+    "stock": 79,
+    "created_at": "2026-08-12T03:55:25.551Z",
+    "updated_at": "2026-08-12T03:55:25.551Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 37,
+  "fields": {
+    "category": 5,
+    "subcategory": 10,
+    "thirdcategory": 18,
+    "pname": "Floral Anarkali Kurta",
+    "brand": "Biba",
+    "price": "2499.00",
+    "p_detail": "Elegant flared Anarkali kurta with a beautiful floral pattern and comfortable fabric, perfect for festive and ethnic occasions.",
+    "p_image": "images/anarkali.jpg",
+    "p_rating": "4.3",
+    "status": true,
+    "stock": 99,
+    "created_at": "2026-08-12T03:56:59.508Z",
+    "updated_at": "2026-08-15T14:36:31.412Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 38,
+  "fields": {
+    "category": 5,
+    "subcategory": 10,
+    "thirdcategory": 18,
+    "pname": "Embroidered Anarkali Dress",
+    "brand": "Aurelia",
+    "price": "2999.00",
+    "p_detail": "Graceful Anarkali featuring delicate embroidery, a flowing silhouette and elegant ethnic styling for special occasions.",
+    "p_image": "images/ambd.jpeg",
+    "p_rating": "3.1",
+    "status": true,
+    "stock": 200,
+    "created_at": "2026-08-12T03:58:08.989Z",
+    "updated_at": "2026-08-12T03:58:08.989Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 39,
+  "fields": {
+    "category": 5,
+    "subcategory": 11,
+    "thirdcategory": 19,
+    "pname": "Mid Rise Skinny Jeans",
+    "brand": "Levi's",
+    "price": "2999.00",
+    "p_detail": "Comfortable stretch denim jeans with a sleek skinny fit, perfect for everyday casual styling.",
+    "p_image": "images/mid.jpeg",
+    "p_rating": "4.0",
+    "status": true,
+    "stock": 100,
+    "created_at": "2026-08-12T03:59:25.917Z",
+    "updated_at": "2026-08-12T03:59:25.917Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 40,
+  "fields": {
+    "category": 5,
+    "subcategory": 11,
+    "thirdcategory": 19,
+    "pname": "High Rise Skinny Fit Jeans",
+    "brand": "ONLY",
+    "price": "2499.00",
+    "p_detail": "Stylish high-rise skinny jeans made with stretch denim, offering a flattering fit and comfortable feel.",
+    "p_image": "images/high.jpeg",
+    "p_rating": "3.5",
+    "status": true,
+    "stock": 39,
+    "created_at": "2026-08-12T04:01:24.436Z",
+    "updated_at": "2026-08-12T04:01:24.436Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 41,
+  "fields": {
+    "category": 5,
+    "subcategory": 11,
+    "thirdcategory": 20,
+    "pname": "High Rise Straight Jeans",
+    "brand": "Levi's",
+    "price": "3499.00",
+    "p_detail": "Classic high-rise straight-leg jeans with comfortable denim and a timeless silhouette for everyday wear.",
+    "p_image": "images/highstr.jpeg",
+    "p_rating": "3.5",
+    "status": true,
+    "stock": 45,
+    "created_at": "2026-08-12T04:03:21.863Z",
+    "updated_at": "2026-08-12T04:03:21.863Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 42,
+  "fields": {
+    "category": 5,
+    "subcategory": 11,
+    "thirdcategory": 20,
+    "pname": "Straight Fit Denim Jeans",
+    "brand": "ONLY",
+    "price": "2299.00",
+    "p_detail": "Stylish straight-fit jeans with comfortable stretch denim and a clean design, suitable for casual outfits.",
+    "p_image": "images/dennim.jpeg",
+    "p_rating": "4.2",
+    "status": true,
+    "stock": 90,
+    "created_at": "2026-08-12T04:04:44.613Z",
+    "updated_at": "2026-08-12T04:04:44.613Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 43,
+  "fields": {
+    "category": 11,
+    "subcategory": 12,
+    "thirdcategory": 21,
+    "pname": "Non-Stick Cookware Set",
+    "brand": "Prestige",
+    "price": "2499.00",
+    "p_detail": "Durable non-stick cookware set with comfortable handles, suitable for everyday cooking and easy cleaning.",
+    "p_image": "images/nonstick.jpg",
+    "p_rating": "4.1",
+    "status": true,
+    "stock": 100,
+    "created_at": "2026-08-12T04:06:07.126Z",
+    "updated_at": "2026-08-12T04:06:07.126Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 44,
+  "fields": {
+    "category": 11,
+    "subcategory": 12,
+    "thirdcategory": 21,
+    "pname": "Stainless Steel Cookware Set",
+    "brand": "Pigeon",
+    "price": "3499.00",
+    "p_detail": "Premium hard-anodised cookware with excellent heat distribution and sturdy construction, ideal for daily cooking.",
+    "p_image": "images/stellness.jpeg",
+    "p_rating": "2.4",
+    "status": true,
+    "stock": 30,
+    "created_at": "2026-08-12T04:07:45.278Z",
+    "updated_at": "2026-08-12T04:07:45.278Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 45,
+  "fields": {
+    "category": 11,
+    "subcategory": 13,
+    "thirdcategory": 23,
+    "pname": "Decorative Wall Mirror",
+    "brand": "Home Centre",
+    "price": "1999.00",
+    "p_detail": "Stylish decorative wall mirror with an elegant frame, perfect for adding a modern touch to living rooms and bedrooms.",
+    "p_image": "images/wallmirror.jpeg",
+    "p_rating": "3.2",
+    "status": true,
+    "stock": 50,
+    "created_at": "2026-08-12T04:10:01.483Z",
+    "updated_at": "2026-08-12T04:10:01.483Z"
+  }
+},
+{
+  "model": "myapp.product",
+  "pk": 46,
+  "fields": {
+    "category": 11,
+    "subcategory": 13,
+    "thirdcategory": 23,
+    "pname": "Collage Photo Frame Set of 6",
+    "brand": "Flipkart SmartBuy",
+    "price": "1299.00",
+    "p_detail": "Stylish collage frame set with six photo slots, ideal for creating a beautiful memory wall at home.",
+    "p_image": "images/frameset.jpeg",
+    "p_rating": "3.4",
+    "status": true,
+    "stock": 30,
+    "created_at": "2026-08-12T04:13:30.326Z",
+    "updated_at": "2026-08-12T04:13:30.326Z"
+  }
+},
+{
+  "model": "myapp.banner",
+  "pk": 2,
+  "fields": {
+    "b_title": "Make Your Home Beautiful",
+    "b_detail": "Give your home a fresh new look with stylish cookware, dΘcor and beautiful home essentials.",
+    "b_image": "images/furniture.jpeg",
+    "button_text": "Buy Now!",
+    "button_link": "/category_page/11/",
+    "status": true,
+    "created_at": "2026-08-04T04:14:18.521Z",
+    "updated_at": "2026-08-12T04:51:00.908Z"
+  }
+},
+{
+  "model": "myapp.banner",
+  "pk": 3,
+  "fields": {
+    "b_title": "Power Up Your World",
+    "b_detail": "Explore the latest laptops, smartphones, smartwatches and audio gadgets at exciting prices.",
+    "b_image": "images/hero.jpeg",
+    "button_text": "Shop Now",
+    "button_link": "/category_page/7/",
+    "status": true,
+    "created_at": "2026-08-12T04:30:34.362Z",
+    "updated_at": "2026-08-12T04:43:19.729Z"
+  }
+},
+{
+  "model": "myapp.banner",
+  "pk": 4,
+  "fields": {
+    "b_title": "Style That Speaks",
+    "b_detail": "Discover trendy fashion for men and women, from everyday essentials to party-ready look",
+    "b_image": "images/Men.jpeg",
+    "button_text": "Buy Now!",
+    "button_link": "/category_page/4/",
+    "status": true,
+    "created_at": "2026-08-12T04:47:38.758Z",
+    "updated_at": "2026-08-12T04:51:18.981Z"
+  }
+}
+]
